@@ -1,0 +1,17 @@
+title: BLog
+description: >-
+  ぼちぼち書いていくつもりです.
+baseurl: ""
+url: "https://Eivy.github.io"
+twitter_username: eivy_m
+github_username:  Eivy
+timezone: Japan/Tokyo
+google_analytics: UA-113621882-1
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+theme: minima
+plugins:
+  - jekyll-feed
