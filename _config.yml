@@ -7,6 +7,8 @@ twitter_username: eivy_m
 github_username:  Eivy
 timezone: Japan/Tokyo
 google_analytics: UA-113621882-1
+disqus:
+  shortname: https-eivy-github-com
 
 # Build settings
 markdown: kramdown
