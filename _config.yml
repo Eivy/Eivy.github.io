@@ -9,6 +9,11 @@ timezone: Japan/Tokyo
 google_analytics: UA-113621882-1
 disqus:
   shortname: https-eivy-github-com
+future: true
+
+# Theme settings
+minima:
+  date_format: "%Y/%m/%d %H:%M"
 
 # Build settings
 markdown: kramdown
