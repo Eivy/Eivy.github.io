@@ -1,0 +1,4 @@
+<div class="next_post">
+	{% if page.previous %}<a class="older" title="{{ page.previous.date | date: "%Y/%m/%d" }}&#10;{{ page.previous.title }}" href="{{ page.previous.url }}"><i class="fas fa-angle-left fa-2x"></i></a>{% endif %}
+	{% if page.next %}<a class="newer" title="{{ page.next.date | date: "%Y/%m/%d" }}&#10;{{ page.next.title }}" href="{{ page.next.url }}"><i class="fas fa-angle-right fa-2x"></i></a>{% endif %}
+</div>
