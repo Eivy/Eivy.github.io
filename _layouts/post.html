@@ -13,6 +13,9 @@ layout: default
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {% endif %}
+      {%- if site.repository -%}
+      <a href="{{ site.repository }}/commits/master/{{ page.path }}"><i class="fas fa-history"></i> 履歴</a>
+      {%- endif -%}
     </p>
   </header>
 
