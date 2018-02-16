@@ -6,7 +6,7 @@
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {% feed_meta %}
-  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {% include google-analytics.html %}
   {% endif %}
 </head>
