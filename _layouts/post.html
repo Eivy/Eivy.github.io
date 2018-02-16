@@ -8,7 +8,7 @@ layout: default
     <p class="post-meta">
       <div class='tags'>
       {% for tag in page.tags %}
-        <a class='tag' href="/tags#{{ tag }}"><i class="fas fa-tag"></i>{{ tag }}</a>
+        <a class='tag' href="/tags?{{ tag }}"><i class="fas fa-tag"></i>{{ tag }}</a>
       {% endfor %}
       </div>
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">

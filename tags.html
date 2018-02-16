@@ -1,0 +1,36 @@
+---
+layout: default
+title: Tags
+---
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script>
+  document.body.onload = function() {
+    var data = {
+      {%- assign last_tag = site.tags | last -%}
+      {% for tag in site.tags %}
+        "{{ tag[0] }}": {
+          "page": [{%- assign last_page = tag[1] | last -%}
+            {%- for page in tag[1] -%}
+            {"url": "{{ page.url }}", "title": "{{ page.title }}"}
+            {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ]
+        }
+      {%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    };
+    var path = location.search;
+    if (path.length > 0)
+      for (var t in data)
+        if (t !== path.substring(1))
+          delete data[t];
+    {% raw %}
+    new Vue({
+      el: '#tags',
+      data,
+      template: '<div><div v-for="(t, v) in this.$data"><h3><i class="fas fa-tag"></i> {{v}}</h3><div v-for="p in t.page"><a :href=p.url>{{p.title}}</a></div></div></div>'
+    });
+    {% endraw %}
+  };
+</script>
+<div id='tags'></div>
