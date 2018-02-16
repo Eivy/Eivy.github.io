@@ -2,7 +2,7 @@
 layout: post
 date: 2018-02-16 12:00:00 UTC+9
 title: JekyllでTagsページを実装
-tags: Jekyll
+tags: Jekyll vue.js
 ---
 [タグページ]({{ "/tags.html" | relative_url }})を書き換えました。
 
