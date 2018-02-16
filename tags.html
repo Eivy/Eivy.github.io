@@ -9,7 +9,7 @@ title: Tags
       {%- assign last_tag = site.tags | last -%}
       {% for tag in site.tags %}
         "{{ tag[0] }}": {
-          "page": [{%- assign last_page = tag[1] | last -%}
+          "page": [
             {%- for page in tag[1] -%}
             {"url": "{{ page.url }}", "title": "{{ page.title }}"}
             {%- unless forloop.last -%},{%- endunless -%}
