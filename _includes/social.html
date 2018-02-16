@@ -9,5 +9,6 @@
   {% if site.twitter_username%}<li><a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><i class='fab fa-twitter'></i> <span class="username">{{ site.twitter_username| escape }}</span></a></li>{% endif %}
   {% if site.youtube_username%}<li><a href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><i class='fab fa-youtube'></i> <span class="username">{{ site.youtube_username| escape }}</span></a></li>{% endif %}
   {% if site.googleplus_username%}<li><a href="https://plus.google.com/{{ site.googleplus_username| escape }}"><i class='fab fa-google-plus-g'></i> <span class="username">{{ site.googleplus_username| escape }}</span></a></li>{% endif %}
+  {% if site.tumblr_username%}<li><a href="https://{{ site.tumblr_username }}.tumblr.com"><i class='fab fa-tumblr'></i> <span class="username">{{ site.tumblr_username| escape }}</span></a></li>{% endif %}
   {% if site.rss %}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><i class='fas fa-rss'></i></svg> <span>{{ site.rss | escape }}</span></a></li>{% endif %}
 </ul>
