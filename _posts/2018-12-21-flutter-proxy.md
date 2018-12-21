@@ -53,7 +53,7 @@ class MyHttpOverrides extends HttpOverrides {
 ググったけど、ネットワーク設定からプロキシ設定を取ってくれるライブラリとかなくてですね。
 しょうがないので自分で作りました。
 
-<div class="github-card" data-github="Eivy/findfile" data-width="400" data-height="" data-theme="default"></div>
+<div class="github-card" data-github="Eivy/get_proxy" data-width="400" data-height="" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
 [connectivity](https://pub.dartlang.org/packages/connectivity)と組み合わせて使うといい感じになります。
