@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FlutterでProxyを使う
+title: FlutterアプリでProxyを使う
 tags: Flutter
 date: 2018-12-21T12:55:49 UTC+9
 ---
