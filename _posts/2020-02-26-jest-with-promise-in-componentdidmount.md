@@ -8,36 +8,56 @@ ReactコンポーネントでcomponentDidMount内でsetStateが動くような�
 
 例えば以下のような感じでテストしても動かないので悩んでいました。
 
+`Test.tsx`
 ```typescript
-import jest from 'jest';
 import * as React from 'react';
-import { render } from '@testing-library/react';
-import request from 'request-promise-native';
-interface Props {};
+import * as request from 'request-promise-native';
+interface Props { };
 interface State {
   time: string,
 };
-class Test extends React.Components {
-  constructor(props: Prop) {
-    super(prop);
+class Test extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
     this.state = {
       time: '',
     };
   }
   render() {
-    return (<div>{this.state.time}</div>);
+    return (
+      <div>
+        { this.state.time }
+      </div>
+    );
   }
-  componentDidMount() {
-    request.get(api_server).then((err, res, body) => setState({time: body}));
+  async componentDidMount() {
+    const time = await request.get('localhost', {}, (err, res, body) => {
+      return body;
+      }
+    );
+    this.setState({time: time});
   }
 }
+export default Test;
+```
+
+`Test.test.tsx`
+```typescript
+import * as React from 'react';
+import * as request from 'request-promise-native';
+import { render } from '@testing-library/react';
+import Test from './Test';
 test('render test', () => {
   const mock_get = jest.spyOn(request, 'get');
-  mock_get.mockResolveValue(new Promise((resolve, reject) => {
+  mock_get.mockResolvedValue(new Promise((resolve, reject) => {
     resolve('23:15:18');
   }));
-  const { getByText } = render(<Test />);
-  expect(getByText('23:15:18')).toBeInTheDocument(); // この時点でstate.timeは''のまま
+  const c  = render(<Test />);
+  setImmediate(() => {
+    console.log(c.debug());
+    expect(c.getByText('23:15:18')).toBeInTheDocument(); // この時点でstate.timeは''のまま
+  }
+  );
 });
 ```
 
