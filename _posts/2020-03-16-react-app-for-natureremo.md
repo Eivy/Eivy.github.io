@@ -8,7 +8,7 @@ image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/
 
 Reactの勉強がてら、[NatureRemo]()を操作するウェブアプリを作ってみました。
 
-<div class="github-card" data-github="Eivy/natureremo-webapp" data-width="400" data-height="" data-theme="default"></div>
+<div class="github-card" data-github="Eivy/natureremo-webapp" data-width="400" data-height="200" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 
 去年の5月にNatureRemoを買ってからハマってしまって、物理ボタンが欲しくなって電子工作を始めてみたりしてたんですが、
