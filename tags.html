@@ -25,11 +25,13 @@ title: Tags
         if (t !== path.substring(1))
           delete data[t];
     {% raw %}
-    new Vue({
-      el: '#tags',
-      data,
-      template: '<div><div v-for="(t, v) in this.$data"><h3><i class="fas fa-tag"></i> {{v}}</h3><div v-for="p in t.page"><a :href=p.url>{{p.title}}</a></div></div></div>'
-    });
+      let app = Vue.createApp({
+        data() {
+          return data;
+        },
+        template: '<div><div v-for="(t, v) in this.$data"><h3><i class="fas fa-tag"></i> {{v}}</h3><div v-for="p in t.page"><a :href=p.url>{{p.title}}</a></div></div></div>'
+      });
+      app.mount('#tags');
     {% endraw %}
   };
 </script>
