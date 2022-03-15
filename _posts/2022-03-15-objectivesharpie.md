@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Xamarin.FormsでiOSフレームワークを参照するやり方を毎回忘れるのでメモ
+tags: Xamarin.Forms
 date: 2022-03-15 11:40:00 UTC+9
 ---
 表題の通り、毎回忘れてやってつまづいているのでメモ。
